@@ -1,9 +1,8 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Base.Theme.Live" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <item name="android:textViewStyle">@style/SegoeUITextViewStyle</item>
-        <item name="android:radioButtonStyle">@style/SegoeUIRadioButtonStyle</item>
         <item name="colorPrimary">@color/background</item>
     </style>
 

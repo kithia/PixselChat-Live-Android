@@ -112,10 +112,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/translation_area_background"
-                android:fontFamily="@font/segoeui"
                 android:gravity="top|start"
                 android:hint="@string/default_translation"
                 android:inputType="none"
+                android:focusable="false"
+                android:cursorVisible="false"
+                android:autofillHints="@null"
                 android:paddingHorizontal="16dp"
                 android:paddingVertical="24dp"
                 android:scrollbars="vertical"
@@ -208,7 +210,6 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/segoeui"
                 android:text="@string/original"
                 android:textColor="@color/white" />
 
@@ -244,7 +245,6 @@
                     android:layout_alignBottom="@+id/originalPlayStopButton"
                     android:layout_marginStart="12dp"
                     android:layout_toEndOf="@id/originalPlayStopButton"
-                    android:fontFamily="@font/segoeui"
                     android:gravity="center"
                     android:text="@string/default_audio_length"
                     android:textColor="@color/black" />
@@ -292,7 +292,6 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/segoeui"
                 android:text="@string/translated"
                 android:textColor="@color/white" />
 
@@ -328,7 +327,6 @@
                     android:layout_alignBottom="@+id/translatedPlayStopButton"
                     android:layout_marginStart="12dp"
                     android:layout_toEndOf="@id/translatedPlayStopButton"
-                    android:fontFamily="@font/segoeui"
                     android:gravity="center"
                     android:text="@string/default_audio_length"
                     android:textColor="@color/black" />
@@ -384,7 +382,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="1dp"
-                android:fontFamily="@font/segoeui"
                 android:paddingHorizontal="4dp"
                 android:text="@string/please_use_your_earbuds_headphones"
                 android:textColor="@color/white" />

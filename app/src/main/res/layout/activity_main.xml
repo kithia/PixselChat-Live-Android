@@ -10,10 +10,11 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/liveSplashLogo"
+        android:id="@+id/liveMainLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/liveactivationlogo"
+        android:contentDescription="@string/pixselchatlive_activationlogo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,15 +22,15 @@
         app:layout_constraintVertical_bias="0.125" />
 
     <TextView
-        android:id="@+id/liveSplashText"
+        android:id="@+id/liveMainText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="@string/pixselchat_live"
         android:textColor="@color/text_dark"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/liveSplashLogo"
-        app:layout_constraintStart_toStartOf="@+id/liveSplashLogo"
-        app:layout_constraintTop_toBottomOf="@+id/liveSplashLogo" />
+        app:layout_constraintEnd_toEndOf="@+id/liveMainLogo"
+        app:layout_constraintStart_toStartOf="@+id/liveMainLogo"
+        app:layout_constraintTop_toBottomOf="@+id/liveMainLogo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

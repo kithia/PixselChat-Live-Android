@@ -14,8 +14,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val splashLogo: ImageView = findViewById(R.id.liveSplashLogo)
-        val splashText: TextView = findViewById(R.id.liveSplashText)
+        val splashLogo: ImageView = findViewById(R.id.liveMainLogo)
+        val splashText: TextView = findViewById(R.id.liveMainText)
 
         val onClickListener = View.OnClickListener { _ ->
             val intent = Intent(this@MainActivity, TranslationActivity::class.java)

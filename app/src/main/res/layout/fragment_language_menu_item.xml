@@ -15,8 +15,8 @@
         android:button="@null"
         android:checked="false"
         android:drawableEnd="@drawable/radio_button_selector"
-        android:fontFamily="@font/segoeui"
         android:text="@string/english"
+        android:fontFamily="@font/segoeui"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@color/text_dark"
         android:textSize="20sp" />
