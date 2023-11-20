@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Live</string>
+    <string name="pixselchat_live">PixselChat Live</string>
+    <string name="english">English</string>
+    <string name="select_your_language">Select your language</string>
+    <string name="default_forum">Global Government Forum - Public Service Data Live</string>
+    <string name="default_locale">London, UK</string>
+    <string name="default_presenter">Sir John Smith</string>
+    <string name="default_title">Fiscal Interaction in a political landscape</string>
+    <string name="default_translation">Translated presentation text…</string>
+    <string name="forum_date_locale">%1$s %2$s %3$s</string>
+    <string name="presenter">PRESENTER: %1$s</string>
+    <string name="title">TITLE: %1$s</string>
+    <string name="font_plus_description">Font plus</string>
+    <string name="font_minus_description">Font minus</string>
+    <string name="start_recording_description">Start recording</string>
+    <string name="stop_recording_description">Stop recording</string>
+    <string name="please_use_your_earbuds_headphones">Please use your earbuds/headphones</string>
+    <string name="headphones_icon">Headphones icon</string>
+    <string name="translated">Translated</string>
+    <string name="original">Original</string>
+    <string name="pixselchatlive_logo">PixselChatLive_Logo</string>
+    <string name="pixselchatlive_title">PixselChatLive_Title</string>
+    <string name="back_button">Back button</string>
+    <string name="play_button">Play button</string>
+    <string name="default_audio_length">--:--</string>
+    <string name="mute_un_mute_button">Mute/ Un-mute button</string>
+</resources>

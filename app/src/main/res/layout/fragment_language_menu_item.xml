@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/foreground"
+    android:orientation="horizontal"
+    android:layout_marginBottom="2sp">
+
+    <RadioButton
+        android:id="@+id/languageRadioButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_margin"
+        android:layout_weight="1"
+        android:button="@null"
+        android:checked="false"
+        android:drawableEnd="@drawable/radio_button_selector"
+        android:fontFamily="@font/segoeui"
+        android:text="@string/english"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/text_dark"
+        android:textSize="20sp" />
+
+</LinearLayout>

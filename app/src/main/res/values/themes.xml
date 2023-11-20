@@ -1,0 +1,23 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Live" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="android:textViewStyle">@style/SegoeUITextViewStyle</item>
+        <item name="android:radioButtonStyle">@style/SegoeUIRadioButtonStyle</item>
+        <item name="colorPrimary">@color/background</item>
+    </style>
+
+    <style name="Theme.Live" parent="Base.Theme.Live">
+        <item name="android:textViewStyle">@style/SegoeUITextViewStyle</item>
+        <item name="android:radioButtonStyle">@style/SegoeUIRadioButtonStyle</item>
+        <item name="colorPrimary">@color/foreground</item>
+    </style>
+
+    <style name="SegoeUITextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/segoeui</item>
+    </style>
+
+    <style name="SegoeUIRadioButtonStyle" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:fontFamily">@font/segoeui</item>
+    </style>
+</resources>

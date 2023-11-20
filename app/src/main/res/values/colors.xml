@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="background">#183540</color>
+    <color name="foreground">#007CB9</color>
+    <color name="text_dark">#EEEEEE</color>
+
+    <color name="recording">#F55353</color>
+    <color name="listening">@color/white</color>
+
+    <color name="audio_player_progress">#3D4444</color>
+    <color name="audio_player_background">#CCCCCC</color>
+    <color name="audio_player_secondary_progress">#666969</color>
+    <color name="audio_player_background_progress">#8F8F8F</color>
+</resources>

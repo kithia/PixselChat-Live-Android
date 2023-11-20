@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    tools:context=".TranslationFragment"
+    android:background="@color/foreground">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineVertical50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineVertical35"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.35" />
+
+        <ImageView
+            android:id="@+id/liveLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:src="@null"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/pixselchatlive_logo" />
+
+        <ImageView
+            android:id="@+id/liveTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            app:layout_constraintStart_toEndOf="@id/liveLogo"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@null"
+            android:contentDescription="@string/pixselchatlive_title" />
+
+        <ImageView
+            android:id="@+id/fragmentTranslationBackButton"
+            android:paddingVertical="16dp"
+            android:paddingHorizontal="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/arrow_back"
+            android:contentDescription="@string/back_button" />
+
+        <LinearLayout
+            android:id="@+id/metaData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="24dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/liveTitle">
+
+            <TextView
+                android:id="@+id/forumDateLocalText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/seguisb"
+                android:text="@string/default_forum"
+                android:textColor="@color/text_dark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/presenterText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4sp"
+                android:fontFamily="@font/seguisb"
+                android:text="@string/default_presenter"
+                android:textColor="@color/text_dark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4sp"
+                android:fontFamily="@font/seguisb"
+                android:text="@string/default_title"
+                android:textColor="@color/text_dark"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="350sp"
+            android:layout_margin="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/metaData">
+
+            <EditText
+                android:id="@+id/translationEditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/translation_area_background"
+                android:fontFamily="@font/segoeui"
+                android:gravity="top|start"
+                android:hint="@string/default_translation"
+                android:inputType="none"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="24dp"
+                android:scrollbars="vertical"
+                android:textColor="@color/text_dark"
+                android:textColorHighlight="@color/foreground"
+                android:textColorHint="@color/text_dark"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/recordingLightView"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="top|end"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/listening_circle"
+                android:elevation="4dp" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/fontSizeControls"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@id/guidelineVertical35"
+            app:layout_constraintStart_toStartOf="@+id/frameLayout"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout">
+
+            <ImageView
+                android:id="@+id/fontPlusImage"
+                android:layout_width="wrap_content"
+                android:layout_height="40sp"
+                android:layout_marginEnd="30sp"
+                android:contentDescription="@string/font_plus_description"
+                android:src="@drawable/font_plus" />
+
+            <ImageView
+                android:id="@+id/fontMinusImage"
+                android:layout_width="wrap_content"
+                android:layout_height="30sp"
+                android:layout_gravity="bottom"
+                android:contentDescription="@string/font_minus_description"
+                android:src="@drawable/font_minus" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/recordingControls"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal"
+            android:gravity="end"
+            app:layout_constraintEnd_toEndOf="@+id/frameLayout"
+            app:layout_constraintStart_toStartOf="@+id/guidelineVertical50"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout">
+
+            <ImageView
+                android:id="@+id/recordButtonImage"
+                android:layout_width="wrap_content"
+                android:layout_height="40sp"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="@string/start_recording_description"
+                android:src="@drawable/start_recording" />
+
+            <ImageView
+                android:id="@+id/stopRecordButtonImage"
+                android:layout_width="wrap_content"
+                android:layout_height="40sp"
+                android:layout_marginStart="30dp"
+                android:contentDescription="@string/stop_recording_description"
+                android:src="@drawable/stop_recording" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/originalAudioLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="28dp"
+            android:paddingHorizontal="38dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fontSizeControls">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/segoeui"
+                android:text="@string/original"
+                android:textColor="@color/white" />
+
+            <!-- <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout="@layout/audio_player" /> -->
+
+            <RelativeLayout
+                android:id="@+id/originalAudioPlayer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/audio_player_background_original"
+                android:paddingHorizontal="18dp"
+                android:paddingVertical="3dp">
+
+                <ImageView
+                    android:id="@+id/originalPlayStopButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="10dp"
+                    android:contentDescription="@string/play_button"
+                    android:src="@drawable/play_arrow" />
+
+                <TextView
+                    android:id="@+id/originalAudioLengthTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignTop="@+id/originalPlayStopButton"
+                    android:layout_alignBottom="@+id/originalPlayStopButton"
+                    android:layout_marginStart="12dp"
+                    android:layout_toEndOf="@id/originalPlayStopButton"
+                    android:fontFamily="@font/segoeui"
+                    android:gravity="center"
+                    android:text="@string/default_audio_length"
+                    android:textColor="@color/black" />
+
+                <SeekBar
+                    android:id="@+id/originalVolumeBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/originalAudioLengthTextView"
+                    android:layout_alignBottom="@+id/originalAudioLengthTextView"
+                    android:layout_toStartOf="@id/originalVolumeButton"
+                    android:layout_toEndOf="@id/originalAudioLengthTextView"
+                    android:gravity="center"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/audio_player_line"
+                    android:thumb="@drawable/audio_player_thumb" />
+
+                <ImageView
+                    android:id="@+id/originalVolumeButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/originalVolumeBar"
+                    android:layout_alignBottom="@+id/originalVolumeBar"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/mute_un_mute_button"
+                    android:src="@drawable/volume_mute" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/translatedAudioLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:paddingHorizontal="38dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/originalAudioLinearLayout">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/segoeui"
+                android:text="@string/translated"
+                android:textColor="@color/white" />
+
+            <!-- <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout="@layout/audio_player"/> -->
+
+            <RelativeLayout
+                android:id="@+id/translatedAudioPlayer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/audio_player_background_translated"
+                android:paddingHorizontal="18dp"
+                android:paddingVertical="3dp">
+
+                <ImageView
+                    android:id="@+id/translatedPlayStopButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="10dp"
+                    android:contentDescription="@string/play_button"
+                    android:src="@drawable/play_arrow" />
+
+                <TextView
+                    android:id="@+id/translatedAudioLengthTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignTop="@+id/translatedPlayStopButton"
+                    android:layout_alignBottom="@+id/translatedPlayStopButton"
+                    android:layout_marginStart="12dp"
+                    android:layout_toEndOf="@id/translatedPlayStopButton"
+                    android:fontFamily="@font/segoeui"
+                    android:gravity="center"
+                    android:text="@string/default_audio_length"
+                    android:textColor="@color/black" />
+
+                <SeekBar
+                    android:id="@+id/translatedVolumeBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/translatedAudioLengthTextView"
+                    android:layout_alignBottom="@+id/translatedAudioLengthTextView"
+                    android:layout_toStartOf="@id/translatedVolumeButton"
+                    android:layout_toEndOf="@id/translatedAudioLengthTextView"
+                    android:gravity="center"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/audio_player_line"
+                    android:thumb="@drawable/audio_player_thumb" />
+
+                <ImageView
+                    android:id="@+id/translatedVolumeButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/translatedVolumeBar"
+                    android:layout_alignBottom="@+id/translatedVolumeBar"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/mute_un_mute_button"
+                    android:src="@drawable/volume_mute" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="24dp"
+            android:paddingBottom="44dp"
+            android:paddingHorizontal="38dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/translatedAudioLinearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="bottom">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/headphones"
+                android:contentDescription="@string/headphones_icon" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:fontFamily="@font/segoeui"
+                android:paddingHorizontal="4dp"
+                android:text="@string/please_use_your_earbuds_headphones"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
