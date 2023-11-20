@@ -50,18 +50,7 @@ class LanguageMenuFragment : Fragment() {
             layoutManager = LinearLayoutManager(context)
 
             // Language items to be displayed
-            val languageArray = arrayOf(
-                Language.ENGLISH,
-                Language.FRENCH,
-                Language.DUTCH,
-                Language.SPANISH,
-                Language.ITALIAN,
-                Language.CHINESE,
-                Language.JAPANESE,
-                Language.RUSSIAN,
-                Language.ARABIC,
-                Language.FARSI
-            )
+            val languageArray = Language.values()
             adapter = LanguageRecyclerViewAdapter(languageArray) { session ->
                 /** Callback function to set the global session object and
                  * launch new Fragment with the session meta data */
