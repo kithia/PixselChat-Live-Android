@@ -25,4 +25,5 @@
     <string name="play_button">Play button</string>
     <string name="default_audio_length">--:--</string>
     <string name="mute_un_mute_button">Mute/ Un-mute button</string>
+    <string name="pixselchatlive_activationlogo">PixselChatLive_ActivationLogo</string>
 </resources>
