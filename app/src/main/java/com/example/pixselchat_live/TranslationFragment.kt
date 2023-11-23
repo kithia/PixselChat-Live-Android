@@ -95,7 +95,7 @@ class TranslationFragment : Fragment() {
             // Formats date object to dd/MM/yy
             val forumDateLocale: TextView = view.findViewById(R.id.forumDateLocalText)
             val formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
-            val formattedDate = session.date.format(formatter)
+            val formattedDate = if (session.date != null) session.date!!.format(formatter) else ""
 
             backButton.setOnClickListener { requireActivity().supportFragmentManager.popBackStack() }
             presenterText.text = getString(R.string.presenter, session.presenter)
@@ -105,8 +105,8 @@ class TranslationFragment : Fragment() {
 
             /** Translation Area **/
             val translationText: TextView = view.findViewById(R.id.translationEditText)
-            // Uncomment to perform operations on the translation text
-            // translationText.text
+            translationText.hint = null
+            translationText.text = session.translation
 
             /** Controls area **/
             val fontPlusImage: ImageView = view.findViewById(R.id.fontPlusImage)

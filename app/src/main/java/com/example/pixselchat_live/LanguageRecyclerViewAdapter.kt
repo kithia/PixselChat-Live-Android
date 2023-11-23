@@ -47,12 +47,12 @@ class LanguageRecyclerViewAdapter(
                     the shared, global viewModel */
                 val session = Session(
                     language,
-                    view.context.getString(R.string.default_forum),
-                    LocalDate.now(),
-                    view.context.getString(R.string.default_locale),
-                    view.context.getString(R.string.default_presenter),
-                    view.context.getString(R.string.default_title),
-                    view.context.getString(R.string.default_translation),
+                    "",
+                    null,
+                    "",
+                    "",
+                    "",
+                    "",
                     null,
                     null
                 )

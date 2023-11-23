@@ -8,7 +8,7 @@ import java.time.LocalDate
 data class Session(
     var language:Language,
     var forum:String,
-    var date:LocalDate,
+    var date:LocalDate?,
     var locale: String,
     var presenter: String,
     var title: String,
